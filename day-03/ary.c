@@ -5,16 +5,21 @@ int main()
     int i,*p,n,s=0;
     printf("Enter the size of array");
     scanf("%d",&n);
+    printf("Enter the numbers");
     p=(int*)malloc(sizeof(int)*n);
     for(i=0;i<n;i++) 
     {
         scanf("%d", p+i);
         s=s+*(p+i);
     }
-    int a =s/n;
-    while (a<*(p+i))
+    float a =s/n;
+    printf("\nThe numbers greater than avg are:");
+    i=0;
+    while (i<n)
     {
-        printf("%d");
+        if(a<*(p+i))
+            printf("\n%d\t",*(p+i));
+        i++;
     }
     
 }
